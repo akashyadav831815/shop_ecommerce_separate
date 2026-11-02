@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEase | Product Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/">ShopEase<span>.</span></a>
+    <p>Find something you'll love.</p>
+  </header>
+  <main class="container">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">THE EVERYDAY STORE</p>
+        <h1>Good products.<br><span>Great everyday prices.</span></h1>
+        <p class="hero-copy">Browse our collection of useful essentials, picked for everyday life.</p>
+      </div>
+    </section>
+    <section class="catalogue">
+      <div class="catalogue-heading">
+        <div><p class="eyebrow">OUR COLLECTION</p><h2>Featured products</h2></div>
+        <span id="result-count" class="result-count">Loading products…</span>
+      </div>
+      <div class="filters">
+        <label class="search-box"><span aria-hidden="true">⌕</span>
+          <input id="search" type="search" placeholder="Search products…" aria-label="Search products">
+        </label>
+        <select id="category" aria-label="Filter by category">
+          <option value="all">All categories</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Fashion">Fashion</option>
+          <option value="Accessories">Accessories</option>
+          <option value="Home">Home</option>
+        </select>
+      </div>
+      <div id="message" class="message" role="status"></div>
+      <div id="products" class="product-grid"></div>
+    </section>
+  </main>
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <article class="modal-card">
+      <button id="close-modal" class="close-button" aria-label="Close product details">×</button>
+      <img id="detail-image" src="" alt="">
+      <div class="modal-content">
+        <p id="detail-category" class="eyebrow"></p>
+        <h2 id="modal-title"></h2>
+        <p id="detail-description"></p>
+        <p id="detail-price" class="detail-price"></p>
+      </div>
+    </article>
+  </div>
+  <footer><p>ShopEase · Demo e-commerce project for educational use</p></footer>
+  <script src="app.js"></script>
+</body>
+</html>
